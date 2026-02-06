@@ -2,6 +2,11 @@ import { eq } from 'drizzle-orm';
 import { db, pool } from './db/db.js';
 import { matches, commentary } from './db/schema.js';
 
+/**
+ * Runs an end-to-end demonstration of CRUD operations against the sports database.
+ *
+ * Performs create, read, update, and delete operations for a match and its commentary entries, logs progress and results, exits the process with code 1 on error, and ensures the database pool is closed when finished.
+ */
 async function main() {
   try {
     console.log('🏆 Performing CRUD operations on sports database...\n');
